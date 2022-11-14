@@ -16,6 +16,35 @@ header > ul, footer > ul {
 
 h1, h2, h3 {
     text-align: center;
+    color: #5394A0;
+}
+
+button {
+    margin: 3px;
+}
+
+.buttonsUp button {
+    color: white;
+    background-color: #4B7171;
+    border: #4B7171 solid 3px;
+    border-radius: 3px;
+}
+
+.buttonsUp button ~ button {
+    background-color: #6F6A87;
+    border: #6F6A87 solid 3px;
+}
+
+.buttonsLow button {
+    color: white;
+    background-color: #4B7171;
+    border: #4B7171 solid 3px;
+    border-radius: 3px;
+}
+
+.buttonsLow button ~ button {
+    background-color: #D9827C;
+    border: #D9827C solid 3px;
 }
 
 @media screen and (min-width:600px) {
@@ -86,7 +115,8 @@ h1, h2, h3 {
 
     textarea {
         width: 100%;
-        height: 100px;
+        height: fit-content;
+        resize: none;
     }
 
     footer {
