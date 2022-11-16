@@ -89,6 +89,24 @@ button:active, button ~ button:active {
     border-radius: 3px;
 }
 
+aside.darkMode {
+    color: white;
+    background-color: darkslategrey;
+}
+
+.darkMode a:link, .darkMode a:visited, .darkMode h1, .darkMode h2, .darkMode h3 {
+    color: white;
+}
+
+body.darkMode {
+    background-color: rgb(24, 36, 36);
+}
+
+.darkMode textarea {
+    background-color: black;
+    color: white;
+}
+
 @media screen and (min-width:600px) {
     body {
         display: grid;
