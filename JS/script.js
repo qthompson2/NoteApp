@@ -1,11 +1,14 @@
-const a = document.querySelector('body');
-const b = document.querySelector('aside');
+const body = document.querySelector('body');
+const aside = document.querySelector('aside');
+
+const elements = [body, aside]
 
 function toggleDarkMode(element) {
     element.classList.toggle('darkMode');
 }
 
-console.log(a, b);
-
-toggleDarkMode(a);
-toggleDarkMode(b);
+function darkMode(elements) {
+    for (let i = 0; i < elements.length; i += 1) {
+        toggleDarkMode(elements[i])
+    }
+}
