@@ -68,12 +68,12 @@ button {
     border-radius: 3px;
 }
 
-.buttonsUp button ~ button {
+#darkmode {
     background-color: #6F6A87;
     border: #6F6A87 solid 3px;
 }
 
-.buttonsLow button ~ button {
+#cancel {
     background-color: #D9827C;
     border: #D9827C solid 3px;
 }
