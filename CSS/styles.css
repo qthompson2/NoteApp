@@ -19,7 +19,20 @@ aside {
     margin: 5px -8px -8px -8px;
 }
 
-header > ul, footer > ul {
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    align-self: flex-end;
+}
+
+nav > ul > li {
+    padding-left: 5%;
+}
+
+nav > ul, footer > ul {
     list-style: none;
     display: flex;
     justify-content: space-around;
@@ -113,7 +126,7 @@ body.darkMode {
         grid-template-rows: repeat(2, 60px);
     }
 
-    header > ul {
+    nav {
         justify-content: space-around;
         grid-row: 2;
         grid-column: 3;
