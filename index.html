@@ -8,34 +8,37 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <script src="./JS/script.js" defer></script>
     <title>Take Better Notes</title>
 </head>
 <body>
     <header>
         <h1 class="scriptText">Take Better Notes</h1>
-        <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Docs</a></li>
-        </ul>
+        <nav>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Docs</a></li>
+            </ul>
+        </nav>
     </header>
     <aside>
         <h2>My Notes</h2>
         <ul>
-            <li><a href="#">Note 1</a></li>
-            <li><a href="#">Note 2</a></li>
+            <!-- <li><a href="#">Note 1</a></li>
+            <li><a href="#">Note 2</a></li> -->
         </ul>
     </aside>
     <main>
         <div class="buttonsUp">
-            <button>New Note</button>
-            <button>Dark Mode</button>
+            <button onclick="newNote(noteElements)">New Note</button>
+            <button id="darkmode" onclick="darkMode(darkmodeElements)">Dark Mode</button>
         </div>
         <div class="note">
             <textarea rows="10">This is a placeholder...</textarea>
         </div>
         <div class="buttonsLow">
-            <button>Save</button>
-            <button>Cancel</button>
+            <button onclick="saveNote()">Save</button>
+            <button id="cancel" onclick="cancelNote(noteElements)">Cancel</button>
         </div>
     </main>
     <footer>
