@@ -23,3 +23,9 @@ function cancelNote(elements) {
         elements[i].classList.add('hidden');
     }
 }
+
+function newNote(elements) {
+    for (let i = 0; i < elements.length; i += 1) {
+        elements[i].classList.remove('hidden');
+    }
+}
