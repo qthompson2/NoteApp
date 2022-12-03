@@ -86,7 +86,7 @@ textarea {
     resize: none;
 }
 
-button:active, button ~ button:active {
+button:active, #cancel:active, #darkmode:active {
     background-color: black;
     border: black solid 3px;
     border-radius: 3px;
@@ -108,6 +108,10 @@ body.darkMode {
 .darkMode textarea {
     background-color: black;
     color: white;
+}
+
+.hidden {
+    display: none;
 }
 
 @media screen and (min-width:600px) {
