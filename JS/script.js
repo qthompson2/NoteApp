@@ -1,15 +1,16 @@
 const body = document.querySelector('body');
 const aside = document.querySelector('aside');
+const asideUl = document.querySelector('aside > ul');
 const textArea = document.querySelector('textarea');
 const noteButtons = document.querySelector('.buttonsLow');
 const shadyButton = document.querySelector('#darkmode');
 const noteList = document.querySelector('aside > ul');
-//const wellLitButton = document.querySelector('body.darkMode main .buttonsUp button#darkmode');
-
 const darkmodeElements = [body, aside];
 const noteElements = [textArea, noteButtons];
 
 let notesArray = [];
+
+asideUl.addEventListener('click', listClick);
 
 function toggleDarkMode(element) {
     element.classList.toggle('darkMode');
@@ -44,4 +45,16 @@ function saveNote() {
     let newListItem = document.createElement('li');
     newListItem.textContent = title;
     noteList.append(newListItem);
+}
+
+function retrieveNote(title) {
+    for (let i = 0; i < notesArray.length; i += 1) {
+        if (notesArray[i]['title'] === title) {
+            return notesArray[i]['content'];
+        }
+    }
+}
+
+function listClick(e) {
+    textArea.value = retrieveNote(e.target.innerText);
 }
